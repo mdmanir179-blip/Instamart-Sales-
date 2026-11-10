@@ -1,0 +1,60 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile with email and preferences",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "theme": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string"
+        }
+      },
+      "required": ["email"]
+    },
+    "SalesReport": {
+      "title": "SalesReport",
+      "description": "Stored user sales reports session",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "totalRecords": {
+          "type": "number"
+        },
+        "totalGMV": {
+          "type": "number"
+        },
+        "totalUnits": {
+          "type": "number"
+        },
+        "createdAt": {
+          "type": "string"
+        }
+      },
+      "required": ["userId", "title", "totalRecords", "totalGMV", "totalUnits"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profiles"
+    },
+    "/reports/{reportId}": {
+      "schema": "SalesReport",
+      "description": "Stored sales reports"
+    }
+  }
+}

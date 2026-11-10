@@ -1,0 +1,6 @@
+{
+  "name": "IM02 - Enterprise Sales & Brand Analytics Suite",
+  "description": "Comprehensive sales, brand metrics, ads performance analytics and automated PDF reporting engine with multi-dimension filtering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
